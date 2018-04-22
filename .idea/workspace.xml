@@ -23,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index-vue1-todolist.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index-vue1-todolist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index-vue1-todolist.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
               <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-vue3-local-componet-todolist.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index-vue3-local-componet-todolist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -57,6 +67,8 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/index-vue2-global-componet-todolist.html" />
+        <option value="$PROJECT_DIR$/index-vue2-local-componet-todolist.html" />
+        <option value="$PROJECT_DIR$/index-vue3-local-componet-todolist.html" />
       </list>
     </option>
   </component>
@@ -125,11 +137,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index-vue2-global-componet-todolist.html">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index-vue3-local-componet-todolist.html">
     <configuration default="false" name="index-vue1-todolist.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue-test/index-vue1-todolist.html">
       <method />
     </configuration>
     <configuration default="false" name="index-vue2-global-componet-todolist.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue-test/index-vue2-global-componet-todolist.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index-vue3-local-componet-todolist.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue-test/index-vue3-local-componet-todolist.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -179,14 +199,16 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index-vue1-todolist.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index-vue2-global-componet-todolist.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index-vue3-local-componet-todolist.html" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index-vue2-global-componet-todolist.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index-vue1-todolist.html" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index-vue3-local-componet-todolist.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index-vue2-global-componet-todolist.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index-vue1-todolist.html" />
       </list>
     </recent_temporary>
   </component>
@@ -200,12 +222,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524389149010</updated>
-      <workItem from="1524389150134" duration="2053000" />
+      <workItem from="1524389150134" duration="2327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2053000" />
+    <option name="totallyTimeSpent" value="2327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -257,6 +279,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index-vue3-local-componet-todolist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding />
         </state>
       </provider>
