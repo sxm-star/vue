@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局Vue组件方式实现todolist</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="inputVal"/>
+    <button @click="handler">提交</button>
+    <ul>
+        <!--<li v-for="item in list">{{item}}</li>-->
+        <todo-item v-bind:content="item" v-for="item in list"></todo-item>
+    </ul>
+
+</div>
+<!--<todo-item v-bind="item" v-for="item in list"></todo-item>-->
+
+<script>
+
+    Vue.component("TodoItem", {
+        props: ["content"],
+        template: '<li>{{content}}</li>'
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            list: [],
+            inputVal: ''
+        },
+        methods: {
+            handler: function () {
+                this.list.push(this.inputVal);
+                this.inputVal = ''
+            }
+        }
+    });
+</script>
+</body>
+</html>
