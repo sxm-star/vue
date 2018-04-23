@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>计算属性,方法,watch监听---方法实现</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<div id="app">
+    <div>
+        {{fullName()}}
+        {{age}}
+    </div>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            firstName: "Xuan Ming",
+            lastName: "Song",
+            age: 18
+        },
+        //计算属性
+        methods: {
+            fullName: function () {
+                console.log("计算了一次");
+                return this.firstName + " " + this.lastName
+            }
+        }
+    });
+</script>
+</body>
+</html>
