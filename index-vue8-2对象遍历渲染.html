@@ -9,7 +9,8 @@
 </head>
 <body>
 <div id="app">
-
+            <!--vue实例方法set app.$set(userInfo,"sex","男") 页面也可以变化(除了改变引用外)-->
+           <!--vue全局set Vue.set(userInfo,"sex","男") 页面也可以变化(除了改变引用外)-->
             <template v-for="(item,key,index) of userInfo" :key="item.id">
 
                   <p> {{item}}--{{key}}--{{index}}</p>
