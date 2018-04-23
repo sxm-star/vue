@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>v-if条件渲染</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<div id="app">
+<div>
+    {{fullName}}
+   <div v-if="show">{{age}}</div>
+</div>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            firstName: "Xuan Ming",
+            lastName: "Song",
+            show: false,
+            age:18
+        },
+        //计算属性
+        computed: {
+            fullName:  {
+                get:function (){
+                    console.log("计算了一次");
+                    return this.firstName + " " +this.lastName
+                },
+                set: function(value){
+                    var arr = value.split(" ");
+                    this.firstName = arr[0];
+                    this.lastName = arr[1];
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
