@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>is属性解决bug</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<div id="app">
+    <div>
+       <counter ref="one" @change="handClick">
+        {{cnt}}
+       </counter>
+        <counter ref="two" @change="handClick">
+            {{cnt}}
+        </counter>
+        <div>总和 {{total}}</div>
+    </div>
+</div>
+<script type="text/javascript">
+     Vue.component("counter",{
+         template:'<div @click=handler>{{cnt}}</div>>',
+         data:function(){
+             return {
+                 cnt:0
+             }
+         },
+         methods:{
+             handler:function(){
+                 this.cnt++;
+                 this.$emit('change')
+             }
+         }
+     })
+    var app = new Vue({
+        el: '#app',
+        data:{
+            total:0
+        },
+        methods:{
+            handClick:function(){
+               this.total = this.$refs.one.cnt + this.$refs.two.cnt
+            }
+        }
+    });
+</script>
+</body>
+</html>
