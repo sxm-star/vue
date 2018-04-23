@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>is属性解决bug</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<div id="app">
+    <div>
+       <table>
+           <tbody>
+             <tr is = row></tr>
+             <tr is = row></tr>
+             <tr is = row></tr>
+           </tbody>
+       </table>
+
+    </div>
+</div>
+<script type="text/javascript">
+    Vue.component("row", {
+        template: '<tr><td>{{content}}</td><td>{{text}}</td></tr>',
+        data:function(){
+            return {
+                content: "this is test",
+                text: "this is desc"
+            };
+        }
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            list:[
+                {id:"001",text:"文本"},
+                {id:"002",text:"语音"},
+                {id:"002",text:"其它"},
+            ]
+        }
+    });
+</script>
+</body>
+</html>
