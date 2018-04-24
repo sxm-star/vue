@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>父组件向子组件传值</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<div id="app">
+    <div>
+        <counter :num0="12"  ></counter>
+        <counter :num0="8" ></counter>
+    </div>
+</div>
+<script type="text/javascript">
+   Vue.prototype.bus = new Vue()
+     var counter = {
+         props:{
+             num0: [Number,String], //要求传递的是数字 或者字符串
+         },
+         template:'<div @click=handler>{{cnt}}</div>',  //这个内部的绑定事件就是原生的
+         data:function(){
+             return {
+                 cnt:this.num0  //克隆 props接收到的值,不允许直接修改props的值
+             }
+         },
+         methods:{
+             handler:function(){
+                 this.bus.$emit("change",this.cnt)
+             }
+         },
+         mounted: function(){
+             var this_  = this;
+             this.bus.$on("change",function(num){
+                 this_.cnt = num
+             })
+         }
+     }
+    var app = new Vue({
+        el: '#app',
+        data:{
+            total: 0
+        },
+        components: {
+            counter: counter  //注册组件
+        },
+        methods:{
+            parentNative:function(){
+                alert("native even");
+            }
+        }
+    });
+</script>
+</body>
+</html>
