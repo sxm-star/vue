@@ -28,12 +28,12 @@
          },
          methods:{
              handler:function(){
-                 this.bus.$emit("change",this.cnt)
+                 this.bus.$emit('change',this.cnt)
              }
          },
          mounted: function(){
              var this_  = this;
-             this.bus.$on("change",function(num){
+             this.bus.$on('change',function(num){
                  this_.cnt = num
              })
          }
